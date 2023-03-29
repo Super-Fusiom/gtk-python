@@ -6,16 +6,21 @@ from gi.repository import Gtk
 class Window(Gtk.Window):
     def __init__(self):
         super().__init__(title="Bing + bong")
-
+        # Create button
         self.button = Gtk.Button(label="Yo wat up")
+        # Make the button do something
         self.button.connect("clicked", self.on_button_clicked)
+        # Add the button to the window
         self.add(self.button)
 
     def on_button_clicked(self, widget):
         print("Wat up")
-
+# Creates window
 win = Window()
+# Connect the X button to quit the app.
 win.connect("destroy", Gtk.main_quit)
+# Shows the window
 win.show_all()
+# Start gtk
 Gtk.main()
 
