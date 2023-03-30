@@ -15,7 +15,7 @@ class Window(Gtk.Window):
 
     def on_button_clicked(self, widget):
         print("Wat up")
-if __name__ == "__name__":
+if __name__ == "__main__":
     # Creates window
     win = Window()
     # Connect the X button to quit the app.
